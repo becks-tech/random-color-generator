@@ -11,3 +11,10 @@ body{
     border: 3px solid black;
     padding: 6em;
 }
+button{
+    background-color: white;
+    border: 1px solid transparent;
+    padding: 1em;
+    border-radius: 10%;
+    cursor: pointer;
+}
