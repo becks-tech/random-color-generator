@@ -2,6 +2,7 @@ const hex = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
 const btn = document.querySelector("#btn");
 const color = document.querySelector(".color");
 const container = document.querySelector(".container")
+const copyBtn = document.querySelector("#copy-btn")
 
 btn.addEventListener("click", function(){
     let hexColor = "#";
@@ -14,4 +15,14 @@ btn.addEventListener("click", function(){
 
 function getRandomNumber(){
     return Math.floor(Math.random() * hex.length);
+};
+
+copyBtn.addEventListener("click", function(){
+    const text = document.querySelector("#color")
+    copyText(text)
+    copyBtn.textContent = "Copied"
+})
+
+function copyText(text){
+    navigator.clipboard.writeText(text.value);
 };
