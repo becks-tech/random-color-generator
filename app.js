@@ -18,9 +18,9 @@ function getRandomNumber(){
 };
 
 copyBtn.addEventListener("click", function(){
-    const text = document.querySelector("#color")
+    let text = document.querySelector("#color")
     copyText(text)
-    copyBtn.textContent = "Copied"
+    copyBtn.textContent = "Copied";
 })
 
 function copyText(text){
