@@ -23,6 +23,11 @@ copyBtn.addEventListener("click", function(){
     copyBtn.textContent = "Copied";
 })
 
-function copyText(text){
-    navigator.clipboard.writeText(text.value);
+async function copyText(text){
+    try{
+        await navigator.clipboard.writeText(text.value);
+        alert(`Copied "${text}" successfully`);
+    } catch {
+        alert("Copy failed: "+ err);
+    }
 };
